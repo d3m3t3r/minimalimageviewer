@@ -62,7 +62,7 @@ $(TARGET): $(OBJECTS) $(RESOURCE)
 $(BUILD_DIR)/%.o: src/%.cpp Makefile | $(BUILD_DIR)
 	$(CXX) $(DEFINES) -Isrc -I"$(WIL_INCLUDE)" $(CPPFLAGS) $(PROJECT_CXXFLAGS) $(CXXFLAGS) -MMD -MP -c "$<" -o "$@"
 
-$(RESOURCE): src/Resource.rc src/Resource.h src/app.ico Makefile | $(BUILD_DIR)
+$(RESOURCE): src/Resource.rc src/Resource.h src/app_info.h src/app.ico Makefile | $(BUILD_DIR)
 	$(WINDRES) --target=pe-x86-64 --codepage=65001 $(DEFINES) -Isrc $(RCFLAGS) -i "$<" -o "$@" -O coff
 
 $(BUILD_DIR):

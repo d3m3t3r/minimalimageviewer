@@ -44,6 +44,7 @@ using Microsoft::WRL::ComPtr;
 #include <wil/resource.h>
 
 #include "Resource.h"
+#include "app_info.h"
 #include "translations.h"
 #include <compare>
 #include <ranges>

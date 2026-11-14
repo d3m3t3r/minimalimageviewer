@@ -37,7 +37,7 @@ void ViewerApp::NavigateImage(int direction, bool allowWrap) {
 
     m_ctx.currentImageIndex = targetIndex;
     std::wstring title = PathFindFileNameW(m_ctx.imageFiles[targetIndex].c_str());
-    title += L"  [Loading...] - Minimal Image Viewer v2.0.6";
+    title += L"  [Loading...] - " APP_NAME_AND_VERSION;
     SetWindowTextW(m_ctx.hWnd, title.c_str());
     LoadImageFromFile(m_ctx.imageFiles[targetIndex], direction < 0);
 }
@@ -726,4 +726,3 @@ LRESULT ViewerApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam
     }
     return 0;
 }
-

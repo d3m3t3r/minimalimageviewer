@@ -81,7 +81,7 @@ void ViewerApp::DeleteCurrentImage() {
                                     m_ctx.loadingFilePath = L"";
                                 }
                                 InvalidateRect(m_ctx.hWnd, nullptr, FALSE);
-                                SetWindowTextW(m_ctx.hWnd, L"Minimal Image Viewer v2.0.6");
+                                SetWindowTextW(m_ctx.hWnd, L"" APP_NAME_AND_VERSION);
                             }
                             else {
                                 if (m_ctx.currentImageIndex >= static_cast<int>(m_ctx.imageFiles.size())) {
@@ -188,7 +188,7 @@ void ViewerApp::HandlePaste() {
 
                         // stop animations
                         KillTimer(m_ctx.hWnd, ANIMATION_TIMER_ID);
-                        SetWindowTextW(m_ctx.hWnd, L"Clipboard Image - Minimal Image Viewer v2.0.6");
+                        SetWindowTextW(m_ctx.hWnd, L"Clipboard Image - " APP_NAME_AND_VERSION);
                         InvalidateRect(m_ctx.hWnd, nullptr, FALSE);
                     }
                 }
@@ -250,7 +250,7 @@ void ViewerApp::RegisterFileAssociations() {
 
     std::wstring command = std::wstring(L"\"") + exePath + L"\" \"%1\"";
     std::wstring progId = L"MinimalImageViewer.Image";
-    std::wstring appName = L"Minimal Image Viewer";
+    std::wstring appName = L"" APP_NAME;
 
     HKEY hKey;
 

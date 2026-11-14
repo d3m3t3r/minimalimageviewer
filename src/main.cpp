@@ -143,7 +143,7 @@ int ViewerApp::Run(HINSTANCE hInstance, int nCmdShow, LPWSTR lpCmdLine) {
     m_ctx.hWnd = CreateWindowExW(
         exStyle,
         wcex.lpszClassName,
-        L"Minimal Image Viewer v2.0.6",
+        L"" APP_NAME_AND_VERSION,
         WS_OVERLAPPEDWINDOW,
         x, y, w, h,
         nullptr, nullptr, hInstance, this

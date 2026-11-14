@@ -141,7 +141,7 @@ INT_PTR CALLBACK ViewerApp::PreferencesDialogProc(HWND hDlg, UINT message, WPARA
 
         if (LOWORD(wParam) == IDC_BTN_REGISTER_ASSOC) {
             pApp->RegisterFileAssociations();
-            MessageBoxW(hDlg, L"File associations successfully registered! You can now find Minimal Image Viewer in the Windows 'Default Apps' settings menu.", L"Success", MB_OK | MB_ICONINFORMATION);
+            MessageBoxW(hDlg, L"File associations successfully registered! You can now find " APP_NAME L" in the Windows 'Default Apps' settings menu.", L"Success", MB_OK | MB_ICONINFORMATION);
             return (INT_PTR)TRUE;
         }
 
